@@ -10,6 +10,7 @@ import UIKit
 
 class ThirdViewController: UIViewController
 {
+    @IBOutlet var CategoriesToProfile: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()

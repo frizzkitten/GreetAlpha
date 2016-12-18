@@ -91,6 +91,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="first" id="Oz4-b5-SFq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CategoriesToProfile" destination="0p8-ez-D7x" id="W61-i4-AyA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2r-cN-zP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="0p8-ez-D7x">
