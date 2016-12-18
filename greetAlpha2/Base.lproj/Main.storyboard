@@ -59,7 +59,7 @@
         <!--Categories-->
         <scene sceneID="bBq-Gm-FsP">
             <objects>
-                <viewController id="OaM-gA-Io6" sceneMemberID="viewController">
+                <viewController id="OaM-gA-Io6" customClass="ThirdViewController" customModule="greetAlpha2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cZi-hI-Xj8"/>
                         <viewControllerLayoutGuide type="bottom" id="sRo-lr-im5"/>
@@ -184,8 +184,8 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="u7Y-xg-7CH"/>
         <segue reference="oYv-BI-SAQ"/>
-        <segue reference="FzB-K8-aPv"/>
         <segue reference="fhI-XO-HYt"/>
     </inferredMetricsTieBreakers>
 </document>
