@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ThirdViewController.swift
 //  greetAlpha2
 //
 //  Created by Raizel Lieberman on 12/13/16.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
-    var tabbar : UITabBar?
-    var segueIdentifier = "firstIdentifier"
+class ThirdViewController: UIViewController
+{
     
-    @IBOutlet var MainToProfile: UISwipeGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,15 +26,11 @@ class FirstViewController: UIViewController {
         UITabBar.appearance().tintColor = selectedColor
         UITabBar.appearance().unselectedItemTintColor = unselectedColor
         UITabBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
 
-
 }
-
