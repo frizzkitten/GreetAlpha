@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController
-{
+class ThirdViewController: UIViewController {
+    
     @IBOutlet var CategoriesToProfile: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {

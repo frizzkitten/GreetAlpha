@@ -42,19 +42,21 @@
                             <outletCollection property="gestureRecognizers" destination="yqm-Jg-ETw" appends="YES" id="0dR-Km-8my"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="first" id="Vss-WL-lYZ"/>
+                    <navigationItem key="navigationItem" id="EoG-h1-QL0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MainToProfile" destination="yqm-Jg-ETw" id="kfe-XL-WgX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="yqm-Jg-ETw">
+                <swipeGestureRecognizer direction="left" id="yqm-Jg-ETw">
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="show" id="Bqz-if-p7j"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="938" y="-72"/>
+            <point key="canvasLocation" x="870" y="-36"/>
         </scene>
         <!--Categories-->
         <scene sceneID="bBq-Gm-FsP">
@@ -102,7 +104,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2567" y="-326"/>
+            <point key="canvasLocation" x="2756" y="-232"/>
         </scene>
         <!--Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -143,24 +145,26 @@
                             <outletCollection property="gestureRecognizers" destination="CAH-Xu-MwE" appends="YES" id="ZQi-e4-Jw0"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="guC-rQ-hb5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ProfileToCategories" destination="Bzz-96-6er" id="IX8-2d-C4C"/>
                         <outlet property="ProfileToMain" destination="CAH-Xu-MwE" id="F71-ho-JIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Bzz-96-6er">
+                <swipeGestureRecognizer direction="left" id="Bzz-96-6er">
                     <connections>
                         <segue destination="OaM-gA-Io6" kind="show" id="MkJ-MF-Y6o"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="CAH-Xu-MwE">
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="show" id="FzB-K8-aPv"/>
+                        <segue destination="9pv-A4-QxB" kind="show" id="82q-su-zkL"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1746" y="-207"/>
+            <point key="canvasLocation" x="1817" y="-127"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -173,7 +177,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Uvi-iH-wXQ"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="OaM-gA-Io6" kind="relationship" relationship="viewControllers" id="oYv-BI-SAQ"/>
                     </connections>
@@ -187,8 +191,8 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u7Y-xg-7CH"/>
-        <segue reference="oYv-BI-SAQ"/>
+        <segue reference="MkJ-MF-Y6o"/>
         <segue reference="fhI-XO-HYt"/>
+        <segue reference="82q-su-zkL"/>
     </inferredMetricsTieBreakers>
 </document>

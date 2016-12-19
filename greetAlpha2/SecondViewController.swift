@@ -9,11 +9,10 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
-    var secondSwipeRecognizer : UISwipeGestureRecognizer?
     
-    @IBOutlet var ProfileToMain: UISwipeGestureRecognizer!
     @IBOutlet var ProfileToCategories: UISwipeGestureRecognizer!
+    @IBOutlet var ProfileToMain: UISwipeGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,32 +34,8 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*
+    
     //https://forums.developer.apple.com/thread/17801
-    func goToPreviousTab(gesture: UIGestureRecognizer)
-    {
-        guard let tabBarController = self.tabBarController,
-        let selectedIndex = tabBarController.selectedIndex,
-        let selectedController = tabBarController.selectedViewController,
-        let viewControllers = tabBarController.viewControllers as! [UIViewController],
-        where selectedIndex > 0 else  return
-        
-        let nextIndex = selectedIndex - 1
-        let fromView = selectedController.view
-        let toView = viewControllers[nextIndex].view
-        
-        UIView.transitionFromView(  fromView,
-                                    toView: toView,
-                                    duration: 0.5,
-                                    options: UIViewAnimationOptions.TransitionCrossDissolve,
-                                    completion: {(finished : Bool) -> () in
-                                        if (finished)
-                                        {
-                                            tabBarController.selectedIndex = nextIndex
-                                        }
-        })
-    }
- */
 
 }
 
