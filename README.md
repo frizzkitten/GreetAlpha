@@ -1,3 +1,3 @@
 # Greet
-Greet, a MyTech app
+Greet, a MyTech app.
 Meet. Greet. Repeat.
