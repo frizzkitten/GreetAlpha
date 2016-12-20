@@ -9,8 +9,10 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+
+    @IBOutlet var LoopsToProfileSwipe: UISwipeGestureRecognizer!
     
-    @IBOutlet var CategoriesToProfile: UISwipeGestureRecognizer!
+    @IBOutlet weak var LoopsToProfileButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

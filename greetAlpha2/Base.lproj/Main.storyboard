@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9pv-A4-QxB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="greetAlpha2" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,44 +21,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTV-cZ-lKe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greet" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTV-cZ-lKe">
                                 <rect key="frame" x="128" y="305" width="119" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Page: Choose what apps you want to use " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Page: Choose what apps you want to use " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="97" y="324" width="181" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hR-JA-Dw6">
+                                <rect key="frame" x="293" y="588" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" red="0.093150061213890967" green="0.93259555101394653" blue="0.86644212196069337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8rJ-Kc-sve" kind="show" id="l5b-Yb-t9o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="yqm-Jg-ETw" appends="YES" id="0dR-Km-8my"/>
+                            <outletCollection property="gestureRecognizers" destination="qzQ-Lg-v54" appends="YES" id="EvY-fp-fHi"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" image="first" id="Vss-WL-lYZ"/>
                     <navigationItem key="navigationItem" id="EoG-h1-QL0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="MainToProfile" destination="yqm-Jg-ETw" id="kfe-XL-WgX"/>
+                        <outlet property="MainToProfileButton" destination="0hR-JA-Dw6" id="t1d-dA-kZb"/>
+                        <outlet property="MainToProfileSwipe" destination="qzQ-Lg-v54" id="xEb-Qo-KAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="yqm-Jg-ETw">
+                <swipeGestureRecognizer direction="left" id="qzQ-Lg-v54">
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="show" id="Bqz-if-p7j"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" id="p73-H7-KLA"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="870" y="-36"/>
+            <point key="canvasLocation" x="869.60000000000002" y="-36.431784107946029"/>
         </scene>
-        <!--Categories-->
+        <!--Third View Controller-->
         <scene sceneID="bBq-Gm-FsP">
             <objects>
                 <viewController id="OaM-gA-Io6" customClass="ThirdViewController" customModule="greetAlpha2" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,36 +87,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-HB-Hvv">
-                                <rect key="frame" x="78" y="227" width="200" height="108"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loops" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-HB-Hvv">
+                                <rect key="frame" x="87" y="279" width="200" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-Vt-Or0">
+                                <rect key="frame" x="16" y="584" width="52" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8rJ-Kc-sve" kind="show" id="LEa-FC-sB9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="0p8-ez-D7x" appends="YES" id="qvq-VJ-wpO"/>
+                            <outletCollection property="gestureRecognizers" destination="MkJ-aH-vj9" appends="YES" id="LV7-kD-3lq"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Categories" image="first" id="Oz4-b5-SFq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="CategoriesToProfile" destination="0p8-ez-D7x" id="W61-i4-AyA"/>
+                        <outlet property="LoopsToProfileButton" destination="lUz-Vt-Or0" id="zT2-hd-rhZ"/>
+                        <outlet property="LoopsToProfileSwipe" destination="MkJ-aH-vj9" id="JgV-dl-fmt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2r-cN-zP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="0p8-ez-D7x">
+                <swipeGestureRecognizer direction="right" id="MkJ-aH-vj9">
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="show" id="fhI-XO-HYt"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" id="445-fD-uoP"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2756" y="-232"/>
         </scene>
-        <!--Profile-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="greetAlpha2" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,6 +152,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-Co-icL">
+                                <rect key="frame" x="0.0" y="588" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Main">
+                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="ooC-EJ-tuo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-Gg-9aN">
+                                <rect key="frame" x="309" y="584" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Loops">
+                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OaM-gA-Io6" kind="show" id="DIa-v2-Yyb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -141,58 +184,36 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Bzz-96-6er" appends="YES" id="CJZ-T2-DCg"/>
-                            <outletCollection property="gestureRecognizers" destination="CAH-Xu-MwE" appends="YES" id="ZQi-e4-Jw0"/>
+                            <outletCollection property="gestureRecognizers" destination="ZKD-zc-vnh" appends="YES" id="Tb4-A9-cZH"/>
+                            <outletCollection property="gestureRecognizers" destination="aZY-PS-rGK" appends="YES" id="3pI-m6-NNo"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="guC-rQ-hb5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ProfileToCategories" destination="Bzz-96-6er" id="IX8-2d-C4C"/>
-                        <outlet property="ProfileToMain" destination="CAH-Xu-MwE" id="F71-ho-JIf"/>
+                        <outlet property="ProfileToLoopsButton" destination="jKX-Gg-9aN" id="ua5-1g-Dhm"/>
+                        <outlet property="ProfileToLoopsSwipe" destination="aZY-PS-rGK" id="H4Z-KO-tmG"/>
+                        <outlet property="ProfileToMainButton" destination="JIb-Co-icL" id="Ou2-7h-SwN"/>
+                        <outlet property="ProfileToMainSwipe" destination="ZKD-zc-vnh" id="A5z-87-bbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="Bzz-96-6er">
+                <swipeGestureRecognizer direction="right" id="ZKD-zc-vnh">
                     <connections>
-                        <segue destination="OaM-gA-Io6" kind="show" id="MkJ-MF-Y6o"/>
+                        <segue destination="9pv-A4-QxB" kind="show" id="hDN-rW-OGv"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="CAH-Xu-MwE">
+                <swipeGestureRecognizer direction="left" id="aZY-PS-rGK">
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="show" id="82q-su-zkL"/>
+                        <segue destination="OaM-gA-Io6" kind="show" id="ZGV-K8-Hmo"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1817" y="-127"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Uvi-iH-wXQ"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="OaM-gA-Io6" kind="relationship" relationship="viewControllers" id="oYv-BI-SAQ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1816.8" y="-127.28635682158921"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="30" height="30"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MkJ-MF-Y6o"/>
-        <segue reference="fhI-XO-HYt"/>
-        <segue reference="82q-su-zkL"/>
+        <segue reference="LEa-FC-sB9"/>
+        <segue reference="DIa-v2-Yyb"/>
+        <segue reference="ooC-EJ-tuo"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,7 +10,9 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    @IBOutlet var MainToProfile: UISwipeGestureRecognizer!
+    @IBOutlet var MainToProfileSwipe: UISwipeGestureRecognizer!
+    
+    @IBOutlet weak var MainToProfileButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
