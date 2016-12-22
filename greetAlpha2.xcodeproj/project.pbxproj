@@ -16,6 +16,7 @@
 		5531D87C1E00F1D000FBC207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5531D87A1E00F1D000FBC207 /* LaunchScreen.storyboard */; };
 		5531D8871E00F1D000FBC207 /* greetAlpha2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8861E00F1D000FBC207 /* greetAlpha2Tests.swift */; };
 		5531D8921E00F24700FBC207 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8911E00F24700FBC207 /* ThirdViewController.swift */; };
+		55CA3C461E0C790A00B82FF4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CA3C451E0C790A00B82FF4 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5531D8861E00F1D000FBC207 /* greetAlpha2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greetAlpha2Tests.swift; sourceTree = "<group>"; };
 		5531D8881E00F1D000FBC207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5531D8911E00F24700FBC207 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		55CA3C451E0C790A00B82FF4 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				5531D8731E00F1D000FBC207 /* SecondViewController.swift */,
 				5531D8911E00F24700FBC207 /* ThirdViewController.swift */,
 				5531D8751E00F1D000FBC207 /* Main.storyboard */,
+				55CA3C451E0C790A00B82FF4 /* Settings.swift */,
 				550A47D01E03AFCE008A3E1C /* SocialMedia.swift */,
 				5531D8781E00F1D000FBC207 /* Assets.xcassets */,
 				5531D87A1E00F1D000FBC207 /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CA3C461E0C790A00B82FF4 /* Settings.swift in Sources */,
 				5531D8741E00F1D000FBC207 /* SecondViewController.swift in Sources */,
 				5531D8701E00F1D000FBC207 /* AppDelegate.swift in Sources */,
 				5531D8921E00F24700FBC207 /* ThirdViewController.swift in Sources */,

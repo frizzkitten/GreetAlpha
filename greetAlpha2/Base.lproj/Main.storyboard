@@ -9,6 +9,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="gSG-2n-3k2">
+            <objects>
+                <viewController id="DRq-wr-xbq" customClass="Settings" customModule="greetAlpha2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xyd-uq-NYX"/>
+                        <viewControllerLayoutGuide type="bottom" id="hKB-lX-ou2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ua-vE-BYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-xM-C8F">
+                                <rect key="frame" x="92" y="287" width="190" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Up to Return" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF8-qq-lht">
+                                <rect key="frame" x="109" y="20" width="157" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aNF-hq-fEe" appends="YES" id="lug-rc-vU9"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="SettingsToMainSwipe" destination="aNF-hq-fEe" id="cbG-St-zwu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbV-C0-RyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="aNF-hq-fEe">
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="show" id="HgU-1Y-8Kv"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="869.60000000000002" y="-828.03598200899557"/>
+        </scene>
         <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -36,13 +82,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hR-JA-Dw6">
-                                <rect key="frame" x="293" y="588" width="82" height="30"/>
+                                <rect key="frame" x="291" y="576" width="84" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile">
+                                <state key="normal" title="Profile --&gt;">
                                     <color key="titleColor" red="0.093150061213890967" green="0.93259555101394653" blue="0.86644212196069337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="l5b-Yb-t9o"/>
+                                    <segue destination="8rJ-Kc-sve" kind="presentation" modalTransitionStyle="crossDissolve" id="l5b-Yb-t9o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Q0-BW-NqE">
+                                <rect key="frame" x="0.0" y="576" width="82" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="&lt;-- Loops">
+                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OaM-gA-Io6" kind="presentation" modalTransitionStyle="crossDissolve" id="Igc-iv-ftD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-Af-47Z">
+                                <rect key="frame" x="154" y="18" width="67" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DRq-wr-xbq" kind="presentation" modalTransitionStyle="crossDissolve" id="Oxk-RK-uf9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,19 +118,28 @@
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="qzQ-Lg-v54" appends="YES" id="EvY-fp-fHi"/>
+                            <outletCollection property="gestureRecognizers" destination="GJu-Ta-YgM" appends="YES" id="tCf-Ts-U7b"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="EoG-h1-QL0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="MainToLoopsButton" destination="4Q0-BW-NqE" id="vwe-sw-gca"/>
+                        <outlet property="MainToLoopsSwipe" destination="GJu-Ta-YgM" id="o59-kt-n7N"/>
                         <outlet property="MainToProfileButton" destination="0hR-JA-Dw6" id="t1d-dA-kZb"/>
                         <outlet property="MainToProfileSwipe" destination="qzQ-Lg-v54" id="xEb-Qo-KAb"/>
+                        <outlet property="MainToSettingsButton" destination="J2b-Af-47Z" id="AHC-MA-2Co"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="qzQ-Lg-v54">
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="show" id="p73-H7-KLA"/>
+                        <segue destination="8rJ-Kc-sve" kind="presentation" modalTransitionStyle="crossDissolve" id="p73-H7-KLA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="GJu-Ta-YgM">
+                    <connections>
+                        <segue destination="OaM-gA-Io6" kind="presentation" modalTransitionStyle="crossDissolve" id="5GP-hx-AJs"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -94,38 +171,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-Vt-Or0">
-                                <rect key="frame" x="16" y="584" width="52" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJK-G5-xJ7">
+                                <rect key="frame" x="304" y="576" width="71" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Profile">
+                                <state key="normal" title="Main --&gt;">
                                     <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="LEa-FC-sB9"/>
+                                    <segue destination="9pv-A4-QxB" kind="presentation" modalTransitionStyle="crossDissolve" id="Uor-0d-aPv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="MkJ-aH-vj9" appends="YES" id="LV7-kD-3lq"/>
+                            <outletCollection property="gestureRecognizers" destination="I0s-BK-J2q" appends="YES" id="vkH-VK-INg"/>
                         </connections>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="LoopsToProfileButton" destination="lUz-Vt-Or0" id="zT2-hd-rhZ"/>
-                        <outlet property="LoopsToProfileSwipe" destination="MkJ-aH-vj9" id="JgV-dl-fmt"/>
+                        <outlet property="LoopsToMainButton" destination="DJK-G5-xJ7" id="nml-2e-9xW"/>
+                        <outlet property="LoopsToMainSwipe" destination="I0s-BK-J2q" id="LKe-VQ-wup"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2r-cN-zP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="MkJ-aH-vj9">
+                <swipeGestureRecognizer direction="left" id="I0s-BK-J2q">
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="show" id="445-fD-uoP"/>
+                        <segue destination="9pv-A4-QxB" kind="presentation" modalTransitionStyle="crossDissolve" id="rZM-0o-9I4"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2756" y="-232"/>
+            <point key="canvasLocation" x="-148" y="-127"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
@@ -153,25 +230,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-Co-icL">
-                                <rect key="frame" x="0.0" y="588" width="60" height="30"/>
+                                <rect key="frame" x="0.0" y="576" width="71" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Main">
+                                <state key="normal" title="&lt;-- Main">
                                     <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="ooC-EJ-tuo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-Gg-9aN">
-                                <rect key="frame" x="309" y="584" width="50" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Loops">
-                                    <color key="titleColor" red="0.093150061209999996" green="0.93259555100000002" blue="0.86644212200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="OaM-gA-Io6" kind="show" id="DIa-v2-Yyb"/>
+                                    <segue destination="9pv-A4-QxB" kind="presentation" modalTransitionStyle="crossDissolve" id="ooC-EJ-tuo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,13 +251,10 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ZKD-zc-vnh" appends="YES" id="Tb4-A9-cZH"/>
-                            <outletCollection property="gestureRecognizers" destination="aZY-PS-rGK" appends="YES" id="3pI-m6-NNo"/>
                         </connections>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ProfileToLoopsButton" destination="jKX-Gg-9aN" id="ua5-1g-Dhm"/>
-                        <outlet property="ProfileToLoopsSwipe" destination="aZY-PS-rGK" id="H4Z-KO-tmG"/>
                         <outlet property="ProfileToMainButton" destination="JIb-Co-icL" id="Ou2-7h-SwN"/>
                         <outlet property="ProfileToMainSwipe" destination="ZKD-zc-vnh" id="A5z-87-bbY"/>
                     </connections>
@@ -199,12 +262,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ZKD-zc-vnh">
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="show" id="hDN-rW-OGv"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="aZY-PS-rGK">
-                    <connections>
-                        <segue destination="OaM-gA-Io6" kind="show" id="ZGV-K8-Hmo"/>
+                        <segue destination="9pv-A4-QxB" kind="presentation" modalTransitionStyle="crossDissolve" id="hDN-rW-OGv"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -212,8 +270,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LEa-FC-sB9"/>
-        <segue reference="DIa-v2-Yyb"/>
-        <segue reference="ooC-EJ-tuo"/>
+        <segue reference="HgU-1Y-8Kv"/>
+        <segue reference="Igc-iv-ftD"/>
+        <segue reference="l5b-Yb-t9o"/>
     </inferredMetricsTieBreakers>
 </document>

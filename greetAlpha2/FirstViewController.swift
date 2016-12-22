@@ -11,8 +11,12 @@ import UIKit
 class FirstViewController: UIViewController {
     
     @IBOutlet var MainToProfileSwipe: UISwipeGestureRecognizer!
+    @IBOutlet var MainToLoopsSwipe: UISwipeGestureRecognizer!
     
     @IBOutlet weak var MainToProfileButton: UIButton!
+    @IBOutlet weak var MainToLoopsButton: UIButton!
+    
+    @IBOutlet weak var MainToSettingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

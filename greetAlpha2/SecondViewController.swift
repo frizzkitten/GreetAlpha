@@ -11,10 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
     
     @IBOutlet var ProfileToMainSwipe: UISwipeGestureRecognizer!
-    @IBOutlet var ProfileToLoopsSwipe: UISwipeGestureRecognizer!
     
     @IBOutlet weak var ProfileToMainButton: UIButton!
-    @IBOutlet weak var ProfileToLoopsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
