@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		550A47D11E03AFCE008A3E1C /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550A47D01E03AFCE008A3E1C /* SocialMedia.swift */; };
+		552BE3C31E0EF4AC00E39BEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552BE3C21E0EF4AC00E39BEF /* Assets.xcassets */; };
 		5531D8701E00F1D000FBC207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D86F1E00F1D000FBC207 /* AppDelegate.swift */; };
 		5531D8721E00F1D000FBC207 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8711E00F1D000FBC207 /* FirstViewController.swift */; };
 		5531D8741E00F1D000FBC207 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8731E00F1D000FBC207 /* SecondViewController.swift */; };
 		5531D8771E00F1D000FBC207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5531D8751E00F1D000FBC207 /* Main.storyboard */; };
-		5531D8791E00F1D000FBC207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5531D8781E00F1D000FBC207 /* Assets.xcassets */; };
 		5531D87C1E00F1D000FBC207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5531D87A1E00F1D000FBC207 /* LaunchScreen.storyboard */; };
 		5531D8871E00F1D000FBC207 /* greetAlpha2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8861E00F1D000FBC207 /* greetAlpha2Tests.swift */; };
 		5531D8921E00F24700FBC207 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531D8911E00F24700FBC207 /* ThirdViewController.swift */; };
@@ -31,12 +31,12 @@
 
 /* Begin PBXFileReference section */
 		550A47D01E03AFCE008A3E1C /* SocialMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
+		552BE3C21E0EF4AC00E39BEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		5531D86C1E00F1D000FBC207 /* greetAlpha2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = greetAlpha2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5531D86F1E00F1D000FBC207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5531D8711E00F1D000FBC207 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5531D8731E00F1D000FBC207 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5531D8761E00F1D000FBC207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5531D8781E00F1D000FBC207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5531D87B1E00F1D000FBC207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5531D87D1E00F1D000FBC207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5531D8821E00F1D000FBC207 /* greetAlpha2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = greetAlpha2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,8 +91,8 @@
 				5531D8911E00F24700FBC207 /* ThirdViewController.swift */,
 				5531D8751E00F1D000FBC207 /* Main.storyboard */,
 				55CA3C451E0C790A00B82FF4 /* Settings.swift */,
+				552BE3C21E0EF4AC00E39BEF /* Assets.xcassets */,
 				550A47D01E03AFCE008A3E1C /* SocialMedia.swift */,
-				5531D8781E00F1D000FBC207 /* Assets.xcassets */,
 				5531D87A1E00F1D000FBC207 /* LaunchScreen.storyboard */,
 				5531D87D1E00F1D000FBC207 /* Info.plist */,
 			);
@@ -192,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5531D87C1E00F1D000FBC207 /* LaunchScreen.storyboard in Resources */,
-				5531D8791E00F1D000FBC207 /* Assets.xcassets in Resources */,
+				552BE3C31E0EF4AC00E39BEF /* Assets.xcassets in Resources */,
 				5531D8771E00F1D000FBC207 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
