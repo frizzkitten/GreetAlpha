@@ -19,6 +19,4 @@ class SocialMedia: NSObject {
     
     var mediaAccounts = [Account]()
     
-    
-    
 }

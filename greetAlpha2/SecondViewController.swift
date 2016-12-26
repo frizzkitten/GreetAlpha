@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var ProfileToMainButton: UIButton!
     
+    @IBOutlet weak var facebookAccount: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +31,7 @@ class SecondViewController: UIViewController {
         UITabBar.appearance().tintColor = selectedColor
         UITabBar.appearance().unselectedItemTintColor = unselectedColor
         UITabBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+
     }
 
     override func didReceiveMemoryWarning() {
