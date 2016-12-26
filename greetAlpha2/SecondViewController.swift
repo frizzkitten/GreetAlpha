@@ -15,7 +15,12 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var ProfileToMainButton: UIButton!
     
     @IBOutlet weak var facebookAccount: UITextField!
-    
+    @IBOutlet weak var snapchatAccount: UITextField!
+    @IBOutlet weak var instagramAccount: UITextField!
+    @IBOutlet weak var twitterAccount: UITextField!
+    @IBOutlet weak var skypeAccount: UITextField!
+    @IBOutlet weak var linkedinAccount: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
