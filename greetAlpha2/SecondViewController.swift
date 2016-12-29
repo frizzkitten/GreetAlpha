@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var ProfileToMainSwipe: UISwipeGestureRecognizer!
     
@@ -25,23 +25,42 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let selectedColor   = UIColor(red: 33.0/255.0, green: 239.0/255.0, blue: 225.0/255.0, alpha: 1.0)
-        let unselectedColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         //teal: red: 33.0/255.0, green: 239.0/255.0, blue: 225.0/255.0, alpha: 1.0
         //purple: red: 198.0/255.0, green: 68.0/255.0, blue: 226.0/255.0, alpha: 1.0
-        
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: unselectedColor], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: selectedColor], for: .selected)
-        
-        UITabBar.appearance().tintColor = selectedColor
-        UITabBar.appearance().unselectedItemTintColor = unselectedColor
-        UITabBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func addUsername(sender: UITextField)
+    {
+        accountNames.setValue(0, forKey: facebookAccount.text!)
+        accountNames.setValue(1, forKey: snapchatAccount.text!)
+        accountNames.setValue(2, forKey: instagramAccount.text!)
+        accountNames.setValue(3, forKey: twitterAccount.text!)
+        accountNames.setValue(4, forKey: skypeAccount.text!)
+        accountNames.setValue(5, forKey: linkedinAccount.text!)
+        self.view.endEditing(true)
+    }
+    
+    //iOS Touch Functions
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        facebookAccount.resignFirstResponder();
+        snapchatAccount.resignFirstResponder();
+        instagramAccount.resignFirstResponder();
+        twitterAccount.resignFirstResponder();
+        skypeAccount.resignFirstResponder();
+        linkedinAccount.resignFirstResponder();
+        
+        return true
     }
     
     //https://forums.developer.apple.com/thread/17801

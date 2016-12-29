@@ -8,15 +8,12 @@
 
 import UIKit
 
-
+var accountNames : SocialMedia = SocialMedia()
 
 class SocialMedia: NSObject {
-
-    struct Account {
-        var mediaImage : NSObjectFileImage
-        var accountName = ""
-    }
     
-    var mediaAccounts = [Account]()
+    //Usernames will be put in a specific order to correspond to the storyboard. If a user does not use one or more social media platforms, it will be left as an empty string.
+    //[Facebook, Snapchat, Instagram, Twitter, Skype, LinkedIn]
+    var mediaAccounts = ["","","","","",""]
     
 }
