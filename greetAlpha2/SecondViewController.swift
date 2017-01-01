@@ -14,7 +14,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var ProfileToMainButton: UIButton!
     
-    @IBOutlet weak var facebookAccount: UITextField!
+    @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var snapchatAccount: UITextField!
     @IBOutlet weak var instagramAccount: UITextField!
     @IBOutlet weak var twitterAccount: UITextField!
@@ -36,7 +36,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addUsername(sender: UITextField)
     {
-        accountNames.setValue(0, forKey: facebookAccount.text!)
         accountNames.setValue(1, forKey: snapchatAccount.text!)
         accountNames.setValue(2, forKey: instagramAccount.text!)
         accountNames.setValue(3, forKey: twitterAccount.text!)
@@ -53,15 +52,18 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     // UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
-        facebookAccount.resignFirstResponder();
-        snapchatAccount.resignFirstResponder();
-        instagramAccount.resignFirstResponder();
-        twitterAccount.resignFirstResponder();
-        skypeAccount.resignFirstResponder();
-        linkedinAccount.resignFirstResponder();
-        
+        textField.resignFirstResponder()
         return true
     }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        accountNames.setValue(1, forKey: snapchatAccount.text!)
+        accountNames.setValue(2, forKey: instagramAccount.text!)
+        accountNames.setValue(3, forKey: twitterAccount.text!)
+        accountNames.setValue(4, forKey: skypeAccount.text!)
+        accountNames.setValue(5, forKey: linkedinAccount.text!)
+        self.view.endEditing(true)
+    }// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
     
     //https://forums.developer.apple.com/thread/17801
 
